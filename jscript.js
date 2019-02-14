@@ -127,13 +127,6 @@ function klikon6() {
 
 
 
-	  var oldAccount2 = document.getElementById("emailRegistr");
-	  oldAccount2.onkeyup = function() {
-    document.getElementById("emailWarning").style.display = "block";
-}
-oldAccount2.onblur = function() {
-    document.getElementById("emailWarning").style.display = "none";
-}
 
 
 
@@ -161,7 +154,7 @@ window.onclick = function(event) {
 }
 
 
-    var oldAccount1 = document.getElementById("passwordRegistr");
+   /* var oldAccount1 = document.getElementById("passwordRegistr");
     var warning = document.getElementById("passwordWarning");
     oldAccount1.onkeyup = function(){
      var lowerCaseLetters = /[a-z]/g;
@@ -184,52 +177,90 @@ oldAccount1.onblur = function() {
 
 
 
-$(document).ready(function(){
-    $("#div1").click(function(){
-        $("#form1").fadeIn(500);
-    });});
-$(document).ready(function(){
-    $("#div2").click(function(){
-        $("#form2").fadeIn(500);
-    });
-});
-$(document).ready(function(){
-    $("#div3").click(function(){
-        $("#form3").fadeIn(500);
-    });
-});
-$(document).ready(function(){
-    $("#div4").click(function(){
-        $("#form4").fadeIn(500);
-    });
-});
-$(document).ready(function(){
-    $("#registration1, #registration3").click(function(){
-        $("#form5").fadeIn(500);
-    });
-});
-$(document).ready(function(){
-    $("#registration2, #newAccount").click(function(){
-        $("#form6").fadeIn(500);
-    });
-});
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
 
 
-	$(document).ready(function(){
-		 $("button").click(function(){
-		 	var massege = $("textarea").val();
-		 	var old =  $("#content").html();
-		 	$("#content").html(old+"<p>" + massege + "</p>");
-		 });
-		}); 
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+
+  slides[slideIndex-1].style.display = "block";  
+
+}
+
+	var slideInd = 0;
+showSlid();
+
+function showSlid() {
+    var i;
+    var slid = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slid.length; i++) {
+        slid[i].style.display = "none"; 
+    }
+    slideInd++;
+    if (slideInd > slid.length) {slideInd = 1} 
+    slid[slideInd-1].style.display = "block"; 
+    setTimeout(showSlid, 3000); // Change image every 2 seconds
+}
+
+*/
 
 
 
 
-	$('#cross1,#cross2,#cross3,#cross4,#cross5,cross6').click(function(){
-   $('#form1,#form2,#form3,#form4,#form5,#form6').fadeOut('slow');
-});
+var oldAccount1 = document.getElementById("passwordRegistr1");
+oldAccount1.onkeyup = function() {
+    document.getElementById("passwordWarning1").style.display = "block";
+};
+
+oldAccount1.onblur = function() {
+    document.getElementById("passwordWarning1").style.display = "none";
+};
+
+
+	  var oldAccount2 = document.getElementById("emailRegistr1");
+	  oldAccount2.onkeyup = function() {
+    document.getElementById("emailWarning1").style.display = "block";
+};
+oldAccount2.onblur = function() {
+    document.getElementById("emailWarning1").style.display = "none";
+};
+
+var newAccount1 = document.getElementById("passwordRegistr2");
+newAccount1.onkeyup = function() {
+    document.getElementById("passwordWarning2").style.display = "block";
+};
+newAccount1.onblur = function() {
+    document.getElementById("passwordWarning2").style.display = "none";
+};
+
+
+	  var newAccount2 = document.getElementById("emailRegistr2");
+	  newAccount2.onkeyup = function() {
+    document.getElementById("emailWarning2").style.display = "block";
+};
+newAccount2.onblur = function() {
+    document.getElementById("emailWarning2").style.display = "none";
+};
+var newAccount3 = document.getElementById("passwordRegistr3");
+newAccount3.onkeyup = function() {
+    document.getElementById("passwordWarning3").style.display = "block";
+};
+newAccount3.onblur = function() {
+    document.getElementById("passwordWarning3").style.display = "none";
+};
 
 
 
